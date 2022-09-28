@@ -21,6 +21,14 @@ void enqueue(int data){
   }
 }
 
+void pop(){
+  if(rear==-1 || rear>front){
+    cout<<"Queue is empty"<<endl;
+  }else{
+    rear++;
+  }
+}
+
 void display(){
   if(rear==-1){
     cout<<"Queue is empty"<<endl;
@@ -29,13 +37,19 @@ void display(){
     for(int i=rear;i<=front ;i++){
       cout<<arr[i]<<" ";
     }
+    cout<<endl;
   }
 }
+
 int main() {
+  
 enqueue(2);
 enqueue(1);
 enqueue(4);
 enqueue(9);
 enqueue(10);
 display();
+pop();
+display();
+  
 }
